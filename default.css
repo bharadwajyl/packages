@@ -1,0 +1,204 @@
+/*********************************
+IMPORT FONT & COLOR & FONT_AWESOME
+**********************************/
+@import "./fonts.css";
+@import "./colors.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css";
+
+
+/*********************************
+        DEFAULT SETTING
+**********************************/
+*, html{
+    scroll-behavior: smooth;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*********************************
+      CUSTOM SCROLL BAR
+**********************************/
+::-webkit-scrollbar {
+    height: 12px;
+    width: 2px;
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    -webkit-box-shadow: 0px 1px 2px var(--dark);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--dark);
+}
+
+
+/*********************************
+       DEFAULT ELEMENTS
+**********************************/
+body{
+    margin:0;
+    overflow-x:hidden !important;
+    font-family: var(--default_font);
+}
+
+a{
+    text-decoration:none !important;
+    min-width: fit-content;
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+
+a, button{
+    transition:0.5s;
+}
+
+em{
+    font-style:normal;
+}
+
+figure{
+    padding:0;
+    margin:0;
+}
+
+a, p, .btn{
+    font-size:16px;
+}
+
+p{
+    line-height:1.9em;
+}
+
+a, button, input, textarea, select{
+    outline:none !important;
+}
+
+fieldset{
+    border:0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin:0;
+}
+
+.title, .sub_title{
+    font-family:var(--title_font);
+}
+
+.flex, .fixed_flex{
+    display:flex;
+}
+
+.flex_content{
+    width:100%;
+}
+
+.align_center{
+    align-items:center;
+}
+
+.t_center{
+    text-align:center;
+}
+
+.padding_1{
+    padding:1rem;
+}
+
+.padding_2{
+    padding:2rem;
+}
+
+.padding_3{
+    padding:3rem;
+}
+
+.padding_4{
+    padding:4rem;
+}
+
+.big{
+    font-size:5em;
+}
+
+.medium{
+    font-size:2em;
+}
+
+.small{
+    font-size:1.3em;
+}
+
+.relative{
+    position:relative;
+}
+
+.btn{
+    padding:0.6rem 1rem;
+    color:inherit;
+    font-family:var(--title_font);
+}
+
+.buttons{
+    gap:10px;
+}
+
+.line{
+    display:block;
+    width:20%;
+    height:2px;
+    background-color:inherit;
+    border-radius:10px;
+}
+
+
+/*********************************
+         MEDIA QUERY
+**********************************/
+@media (max-width:1020px){
+    .padding_1, .padding_2, .padding_3, .padding_4{
+        padding:2rem;
+    }
+    
+    .medium{
+        font-size:1.8em;
+    }
+}
+
+@media (max-width:720px){
+    .flex{
+        flex-wrap:wrap;
+    }
+    
+    .padding_1, .padding_2, .padding_3, .padding_4{
+        padding:1rem;
+    }
+    
+    .big{
+        font-size:1.8em;
+    }
+    
+    .medium{
+        font-size:1.4em;
+    }
+    
+    .small{
+        font-size:1.1em;
+    }
+    
+    .btn{
+        padding:0.5rem 1rem;
+    }
+    
+    a, p, .btn{
+        font-size:12px;
+    }
+}

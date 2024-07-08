@@ -1,13 +1,13 @@
 /*********************************
      IMPORT DEFAULT PACKAGE
 **********************************/
-@import "./../../packages/default.css"; 
+@import "https://raw.githubusercontent.com/bharadwajyl/packages/main/windows/packages/default.css"; 
 
 
 /*********************************
        IMPORT ANIMATION
 **********************************/
-@import "./animation.css";
+@import "https://raw.githubusercontent.com/bharadwajyl/packages/main/windows/assets/css/animation.css";
 
 
 /*********************************

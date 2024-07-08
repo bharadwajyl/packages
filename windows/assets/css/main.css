@@ -1,16 +1,4 @@
 /*********************************
-     IMPORT DEFAULT PACKAGE
-**********************************/
-@import "https://raw.githubusercontent.com/bharadwajyl/packages/main/windows/packages/default.css"; 
-
-
-/*********************************
-       IMPORT ANIMATION
-**********************************/
-@import "https://raw.githubusercontent.com/bharadwajyl/packages/main/windows/assets/css/animation.css";
-
-
-/*********************************
        DEFAULT SETTING
 **********************************/
 :root{

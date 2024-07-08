@@ -1,0 +1,25 @@
+/*********************************
+        DEFAULT COLORS
+**********************************/
+
+:root{
+    --white: #fff;
+    --black: #000;
+    --gray: #bfc1c0;
+    --lite: #bfbfbf;
+    --dark: #1d1e22;
+    
+    --yellow: #f5b409;
+    --red: #de4432;
+    --green: #9bd846;
+    --blue: #030083;
+    --orange: #ee712f;
+    
+    --primary: ;
+    --primary_dark: ;
+    --primary_lite: ;
+    
+    --secondary: #008081;
+    --secondary_dark: ;
+    --secondary_lite: ;
+}

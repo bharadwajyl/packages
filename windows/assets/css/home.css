@@ -1,0 +1,302 @@
+/*********************************
+    IMPORT MAIN STYLE SHEET
+**********************************/
+@import "./main.css"; 
+
+
+/*********************************
+        SPLASH SCREEN
+**********************************/
+/*SPLASH SCREEN 1*/
+.splash_screens{
+    height:100vh;
+    overflow:hidden;
+    background-color:var(--dark);
+    color:var(--lite);
+}
+
+.splash_screen, .main_screen{
+    height:100%;
+    display:none;
+}
+
+.splash_screen section{
+    height:100%;
+    flex-wrap:wrap;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.splash_screen article b{
+    color:var(--white);
+}
+
+.splash_screen_1 .top_table tr:last-child{
+    display:none;
+    transition:0.5s;
+}
+
+
+/*SPLASH SCREEN 2*/
+.splash_screen_2 .top_table{
+    border:2px solid var(--white);
+    padding:0.1rem;
+}
+
+.splash_screen_2 .top_table tr{
+    display:flex;    
+}
+
+.splash_screen_2 .top_table tr{
+    border:1px solid var(--white);
+    padding:1rem;
+}
+
+.splash_screen_2 .top_table tr:first-child{
+    border-bottom:0;
+    padding-bottom:0;
+}
+
+.splash_screen_2 .top_table tr:last-child{
+    border-top:0;
+}
+
+.splash_screen_2 .top_table tr td{
+    white-space:nowrap;
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+
+.splash_screen_2 .top_table tr td strong, .splash_screen_2 .top_table tr td b{
+    width:100%;
+}
+
+.splash_screen_2 .top_table tr td b:before{
+    content:":";
+    margin-right:5px;
+}
+
+.splash_screen_2 .middle_table tr:not(:first-child){
+    display:none;
+}
+
+
+/*MAIN SCREEN*/
+.main_screen{
+    width:100%;
+    height:100%;
+    background-color:var(--secondary);
+    background-size:cover;
+}
+
+/*nav*/
+nav{
+    width:100%;
+    background:var(--gray);
+    border-top:1px solid #c0e8ea;
+    position:fixed;
+    bottom:0;
+    left:0;
+    z-index:1;
+    background-color: #cac6cb;
+    box-shadow: inset 0 1.5px 0 0 #cac6cb, inset 0 3px 0 0 #fcfcfc;
+    padding: 3px;
+    color:var(--dark);
+}
+
+nav ul{
+    justify-content:space-between;
+}
+
+nav ul li{
+    gap:5px;
+}
+
+nav ul li .active{
+    box-shadow: inset -1.5px -1.5px 0 0 #fcfcfc, inset 1.5px 1.5px 0 0 #263238, inset -3px -3px 0 0 #cac6cb, inset 3px 3px 0 0 #a099a1;
+}
+
+nav .time{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-shadow: inset -1.5px -1.5px 0 0 #fcfcfc, inset 1.5px 1.5px 0 0 #a099a1;
+    display: grid;
+    place-items: center;
+    padding:0.6rem 1rem;
+}
+
+/*header*/
+header .icons{
+    flex-direction:column;
+}
+
+header .icons li{
+    flex-direction: column;
+    position: relative;
+    width: 116px;
+    margin:1.5rem 0;
+    gap:0.3rem;
+}
+
+header .icons li img{
+    width:48px;
+}
+
+/*modal*/
+.modal{
+    padding:0.3rem;
+    width:700px;
+    height:70vh;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background-color:#cac6cb;
+    box-shadow: inset -1.5px -1.5px 0 0 #263238, inset 1.5px 1.5px 0 0 #dedcde, inset -3px -3px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
+    z-index:1;
+    overflow:hidden;
+    display:none;
+}
+
+.top_tool_bar{
+    background-color:#577783;
+    padding:0.3rem;
+    justify-content:space-between;
+}
+
+.top_tool_bar .title_header{
+    gap:10px;
+    color:var(--white);
+}
+
+.modal .top_tool_bar .icons li{
+    box-shadow: inset -1.5px -1.5px 0 0 #263238, inset 1.5px 1.5px 0 0 #fcfcfc, inset -3px -3px 0 0 #a099a1, inset 3px 3px 0 0 #cac6cb;
+    padding-bottom: 1.5px;
+    padding-right: 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.5px;
+    z-index: 4;
+    background: #cac6cb;
+    position: relative;
+    width: 22px;
+    height: 20px;
+    background: #cac6cb;
+}
+
+.modal .top_tool_bar .icons li:active{
+    box-shadow: inset -1.5px -1.5px 0 0 #fcfcfc, inset 1.5px 1.5px 0 0 #263238, inset -3px -3px 0 0 #cac6cb, inset 3px 3px 0 0 #a099a1;
+}
+
+.modal .top_tool_bar .icons li:before{
+    content: "";
+    background-position: center center;
+}
+
+.modal .top_tool_bar .icons li:after{
+    content:"";
+    position: absolute;
+    display: block;
+}
+
+.modal .top_tool_bar .icons li:first-child:after{
+    bottom: 4.5px;
+    left: 50%;
+    transform:translate(-50%, 0);
+    width: 10px;
+    height: 3px;
+    background: #263238;
+}
+
+.modal .top_tool_bar .icons li:nth-child(2):after{
+    width: 50%;
+    height: 12px;
+    border: 1.5px solid #263238;
+    border-top-width: 1.5px;
+    border-top-width: 3px;
+    background-color: #cac6cb;
+}
+
+.modal .top_tool_bar .icons li:last-child{
+    margin-left:0.3rem;
+}
+
+.modal .top_tool_bar .icons li:last-child:after{
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOHB4IiBoZWlnaHQ9IjdweCIgdmlld0JveD0iMCAwIDggNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgPHBvbHlnb24gc3Ryb2tlPSJub25lIiBmaWxsPSIjMjYzMjM4IiBwb2ludHM9IjMgMyAyIDMgMiAyIDEgMiAxIDEgMCAxIDAgMCAyIDAgMiAxIDMgMSAzIDIgNSAyIDUgMSA2IDEgNiAwIDggMCA4IDEgNyAxIDcgMiA2IDIgNiAzIDUgMyA1IDQgNiA0IDYgNSA3IDUgNyA2IDggNiA4IDcgNiA3IDYgNiA1IDYgNSA1IDMgNSAzIDYgMiA2IDIgNyAwIDcgMCA2IDEgNiAxIDUgMiA1IDIgNCAzIDQiPjwvcG9seWdvbj4KPC9zdmc+");
+    width: 12px;
+    height: 10px;
+}
+
+/*tool links*/
+.tool_links{
+    padding:0.2rem 0rem;
+    color:var(--dark);
+}
+
+.tool_links .links li{
+    cursor:default;
+    padding:0.2rem 0.8rem;
+}
+
+.tool_links .links li a{
+    position:relative;
+}
+
+.tool_links .links li:hover{
+    background-color:#577783;
+    color:var(--white);
+}
+
+.tool_links .links li a:after{
+    content:"";
+    position:absolute;
+    width:35%;
+    height:1px;
+    bottom:0px;
+    left:0;
+    background-color:var(--dark);
+}
+
+.tool_links .links li:hover a:after{
+    background-color:var(--white);
+}
+
+.modal .content{
+    width:100%;
+    overflow-y:auto;
+    height: calc(100% - 85px);
+    background-color:var(--white);
+}
+
+.modal .content li{
+    padding:0.4rem 0;
+}
+
+.content article .title, .content article .sub_title{
+    opacity:1;
+    color:var(--dark);
+}
+
+.content article p, .content article ul li{
+    color:rgba(1,1,1,0.7);
+    opacity:1;
+}
+
+.modal .bottom_tool_bar{
+    box-shadow: inset -1.5px -1.5px 0 0 #fcfcfc, inset 1.5px 1.5px 0 0 #a099a1;
+    position: relative;
+    height: 26px;
+    padding:0 0.2rem;
+    line-height: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    color:rgba(1,1,1,0.6);
+}
+
+.modal .bottom_tool_bar li{
+    opacity:0.6;
+}
